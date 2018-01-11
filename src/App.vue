@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Mouse :renderProp="__render"/>
+    <Mouse :render="renderPosition" />
   </div>
 </template>
 
@@ -13,7 +13,7 @@ export default {
     Mouse
   },
   methods: {
-    __render({ x, y }) {
+    renderPosition({ x, y }) {
       return (
         <h1>
           The mouse position is ({x}, {y})

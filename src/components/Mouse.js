@@ -1,7 +1,7 @@
 const Mouse = {
   name: "Mouse",
   props: {
-    renderProp: {
+    render: {
       type: Function,
       required: true
     }
@@ -21,7 +21,7 @@ const Mouse = {
   render(h) {
     return (
       <div style={{ height: "100%" }} onMousemove={this.handleMouseMove}>
-        {this.renderProp(this)}
+        {this.$props.render(this)}
       </div>
     );
   }
